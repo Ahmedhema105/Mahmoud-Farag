@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05052f">
+  <title>إدارة المنتجات | مزرعة محمود فرج</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg"><meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="css/header.css?v=4"><link rel="stylesheet" href="css/admin.css?v=4">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <img src="assets/logo.jpg" alt="شعار مزرعة محمود فرج لأسماك الزينة">
+        <span class="brand-copy">
+          <strong>مزرعة محمود فرج</strong>
+          <small>لأسماك الزينة ومستلزمات الحيوانات</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <a class="nav-link" href="index.html">الرئيسية</a>
+        <a class="nav-link" href="addresses.html">العناوين</a>
+        <a class="nav-link" href="contact.html">تواصل معنا</a>
+        <a class="nav-link login-nav" href="admin.html" aria-current="page">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <section id="loginView" class="panel login-panel">
+      <div class="section-kicker">ADMIN PANEL</div>
+      <h1>تسجيل دخول الأدمن</h1>
+      <p class="muted">سجّل الدخول برقم الموبايل وكلمة المرور المخصصين للأدمن.</p>
+      <form id="loginForm">
+        <label for="loginPhone">رقم الموبايل</label>
+        <input id="loginPhone" type="tel" inputmode="numeric" autocomplete="username" placeholder="010xxxxxxxx" required>
+        <label for="loginPassword">كلمة المرور</label>
+        <input id="loginPassword" type="password" autocomplete="current-password" placeholder="كلمة المرور" required>
+        <button class="primary-btn" type="submit">تسجيل الدخول</button>
+      </form>
+      <p class="login-note">الدخول متاح للحساب المصرّح له فقط.</p>
+    </section>
+
+    <section id="dashboard" hidden>
+      <div class="dashboard-heading">
+        <div><div class="section-kicker">CONTROL CENTER</div><h1>إدارة المنتجات</h1><p class="muted">أضف المنتجات وعدّل الأسعار أو احذف المنتجات القديمة.</p></div>
+        <div class="account-box"><span id="adminEmail"></span><button id="logoutButton" class="logout-btn">تسجيل الخروج</button></div>
+      </div>
+
+      <section class="panel form-panel">
+        <div class="panel-title"><h2>إضافة منتج جديد</h2><span class="title-mark">✦</span></div>
+        <form id="productForm" class="product-form">
+          <div class="field"><label for="productName">اسم المنتج</label><input id="productName" type="text" maxlength="90" placeholder="مثال: جوبي فول جولد" required></div>
+          <div class="field"><label for="productPrice">السعر بالجنيه</label><input id="productPrice" type="number" min="0" step="0.01" placeholder="مثال: 75" required></div>
+          <div class="field"><label for="productCategory">التصنيف</label><select id="productCategory" required><option value="fish">أسماك الزينة</option><option value="supplies">مستلزمات الأحواض</option><option value="food">الأعلاف</option><option value="pets">مستلزمات الكلاب والقطط وطيور الزينة</option></select></div>
+          <div class="field image-field"><label for="productImage">صورة المنتج (اختياري)</label><input id="productImage" type="file" accept="image/jpeg,image/png,image/webp"><small id="imageHint" class="image-hint">اختياري — JPG أو PNG أو WEBP، بحد أقصى 1 ميجابايت.</small><img id="imagePreview" class="image-preview" alt="معاينة صورة المنتج" hidden></div>
+          <div class="form-actions"><button id="submitProduct" class="primary-btn" type="submit">إضافة المنتج</button><button id="cancelEdit" class="secondary-btn" type="button" hidden>إلغاء التعديل</button></div>
+        </form>
+      </section>
+
+      <section class="panel products-panel">
+        <div class="panel-title"><h2>المنتجات الموجودة</h2><span id="adminCount" class="count-pill">0 منتج</span></div>
+        <div class="table-wrap"><table><thead><tr><th>الصورة</th><th>اسم المنتج</th><th>التصنيف</th><th>السعر</th><th>الإجراءات</th></tr></thead><tbody id="adminProducts"><tr><td colspan="5" class="empty-cell">جاري تحميل المنتجات...</td></tr></tbody></table></div>
+      </section>
+    </section>
+
+    <div id="statusMessage" class="status-message" role="status" hidden></div>
+    <footer>أهلاً وسهلاً بيك في مزرعة محمود فرج لأسماك الزينة</footer>
+  </main>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

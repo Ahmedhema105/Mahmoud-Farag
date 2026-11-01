@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05052f">
+  <title>مزرعة محمود فرج لأسماك الزينة | قائمة الأسعار</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg"><meta name="description" content="قائمة أسعار مزرعة محمود فرج لأسماك الزينة والأعلاف ومستلزمات الأحواض والحيوانات الأليفة."><link rel="stylesheet" href="css/header.css?v=4"><link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <img src="assets/logo.jpg" alt="شعار مزرعة محمود فرج لأسماك الزينة">
+        <span class="brand-copy">
+          <strong>مزرعة محمود فرج</strong>
+          <small>لأسماك الزينة ومستلزمات الحيوانات</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+        <a class="nav-link" href="addresses.html">العناوين</a>
+        <a class="nav-link" href="contact.html">تواصل معنا</a>
+        <a class="nav-link login-nav" href="admin.html">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">MAHMOUD FARAJ</span>
+      <h1>قائمة الأسعار</h1>
+      <p>تصفح أسعار أسماك الزينة والأعلاف ومستلزمات الحيوانات والطيور.</p>
+    </section>
+
+    <section class="catalog" aria-label="قائمة المنتجات">
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="ابحث عن منتج..." autocomplete="off">
+        </label>
+        <div id="categoryFilters" class="filters" aria-label="تصنيفات المنتجات">
+          <button class="filter-btn active" data-category="all">الكل</button>
+          <button class="filter-btn" data-category="fish">أسماك الزينة</button>
+          <button class="filter-btn" data-category="supplies">مستلزمات الأحواض</button>
+          <button class="filter-btn" data-category="food">الأعلاف</button>
+          <button class="filter-btn" data-category="pets">مستلزمات الكلاب والقطط وطيور الزينة</button>
+        </div>
+      </div>
+
+      <div class="list-heading">
+        <h2>المنتجات المتاحة</h2>
+        <span id="productsCount"></span>
+      </div>
+      <div id="productsList" class="products-list"></div>
+      <p id="emptyMessage" class="empty-message" hidden>مفيش منتجات مطابقة لبحثك.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>أهلاً وسهلاً بيك في مزرعة محمود فرج لأسماك الزينة</p>
+      <p><a href="addresses.html">عناوين الفروع</a> · <a href="contact.html">تواصل معنا</a></p>
+    </footer>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
